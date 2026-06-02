@@ -6,167 +6,167 @@
 <h1 align="center">OKX Resonance</h1>
 
 <p align="center">
-  <b>加密货币多维度技术分析桌面应用</b><br>
-  Multi-Dimensional Crypto Technical Analysis Desktop App
+  <b>Multi-Dimensional Crypto Technical Analysis Desktop App</b><br>
+  加密货币多维度技术分析桌面应用
 </p>
 
 ---
 
-## 这是什么？
+## What Is This?
 
-**OKX Resonance** 是一款加密货币技术分析桌面工具，自动从 OKX 交易所拉取行情数据，通过多个维度帮你分析市场状态。
+**OKX Resonance** is a crypto technical analysis desktop tool that pulls market data from OKX exchange in real time and helps you read the market through multiple dimensions — all in one dashboard.
 
-- **趋势方向** — EMA144/169 双均线判断多头/空头/缠绕
-- **支撑与阻力** — 6 维评分找出历史关键价位（Super / Strong / Weak）
-- **成交量分布** — POC、Value Area、HVN
-- **清算热力图** — 模拟多杠杆档位的潜在清算位置
-- **订单墙** — 实时买卖盘挂单压力
-- **综合置信度** — 8 因子 0-100% 评分，支持三种策略模式
+- **Trend Direction** — EMA144/169 dual MA system. Golden Cross / Death Cross / Entangled.
+- **Support & Resistance** — 6-dimension scoring identifies historically critical price levels (Super / Strong / Weak).
+- **Volume Profile** — POC, Value Area (70%), HVN.
+- **Liquidation Heatmap** — Simulates potential liquidation clusters across 7 leverage tiers.
+- **Order Wall** — Real-time bid/ask depth and pressure.
+- **Confidence Score** — 8-factor 0–100% rating with 3 strategy modes.
 
-不依赖 OKX API Key，打开即用。中文 / English / 日本語。
-
----
-
-## 独家算法揭秘
-
-### 六维共振评分 —— 为什么我们的 S/R 比 TradingView 准？
-
-大多数工具只画一条水平线就叫"支撑阻力"。**OKX Resonance 完全不同**——每一道 S/R 都要经过 6 个维度的交叉验证，算法才给出评级：
-
-- **触及次数**（最高 +5 分）—— 历史上价格在这个区间反复触及但没突破，每次有效触及 +1 分
-- **反转力度**（+2 分）—— 触及后反转超过 2 倍 ATR，说明这个位置有大资金在防守
-- **心理价位**（+1 分）—— 整数关口、万位关口，市场参与者天然关注
-- **FVG 缺口**（+1 分）—— Fair Value Gap 未回补的流动性真空区，价格有强引力回到此处
-- **清算区域**（+1 分）—— 此处积累了密集的杠杆头寸，一旦被突破会引发连锁清算
-- **订单墙**（+1 分）—— 当前盘口有大额挂单在此，形成即时支撑/阻力
-
-**只有 ≥5 分的才会被标记为 Super**，值得重点盯盘。
-
-在此基础上，算法还对 **1H / 4H / 1D 三个周期分别独立计算**，再将各周期结果加权合并（阈值 0.5%）。如果三个周期在同一个价位同时出现 S/R——这就是**共振**（Resonance），也是项目名字的由来。
-
-> 📌 **一句话**：你要的不是"图上随手画一条线"，你要的是"三个时间周期、六个维度都在说同一个位置很重要"。
+No OKX API Key needed for basic analysis. Just open and go. 中文 / English / 日本語.
 
 ---
 
-### OI-Flow 清算热力图 —— 预测别人在哪里爆仓
+## Proprietary Algorithm Breakthrough
 
-清算数据不是 OKX 公开提供的。我们实现了一套**基于持仓量流（OI-Flow）的逆向重建算法**：
+### 6-Dimension Resonance Scoring — Why Our S/R Beats TradingView
 
-- 利用 OKX 公开的 Open Interest 历史变化，反向推导新增持仓的入场价格
-- 按 **7 档杠杆分布模型**（100x / 50x / 20x / 10x / 5x / 3x / 1x）分配权重
-- 引入 **Brunnermeier-Pedersen 级联放大模型**：模拟当一级杠杆触及清算价后，价格推动下一级爆仓的连锁效应
+Most tools draw a flat horizontal line and call it "support". **OKX Resonance is fundamentally different** — every S/R level must pass 6 independent checks before the algorithm assigns a rating:
 
-这不等于真实的交易所清算数据，但它在逻辑上与做市商使用的风险评估模型同源。**你看到的不只是"哪里有人爆仓"，而是"爆完这里后，下一个引爆点在哪"。**
+- **Touch Count** (up to +5) — Price tested this level repeatedly in history without breaking through. Each valid touch adds +1.
+- **Reversal Strength** (+2) — Price reversed more than 2x ATR after touching, indicating large capital defending this zone.
+- **Psychological Level** (+1) — Round numbers, ten-thousand marks. Market participants naturally gravitate here.
+- **FVG Gap** (+1) — Fair Value Gap — an unfilled liquidity void. Price has a strong magnetic pull back to this zone.
+- **Liquidation Zone** (+1) — Dense leveraged positions accumulated here. A breach would trigger cascading liquidations.
+- **Order Wall** (+1) — Current order book shows large resting orders forming immediate support/resistance.
 
----
+**Only levels scoring ≥5 are marked as Super** — worth your full attention.
 
-### 八因子置信度 —— 不只看价格，看全局
+On top of this, the algorithm calculates independently for **1H, 4H, and 1D timeframes**, then merges results with weighted aggregation (0.5% threshold). When all three timeframes flag the same price level simultaneously — that is **Resonance**, and that is where the project gets its name.
 
-八个相互独立的因子，加权计算 0-100% 的综合置信度：
-
-- **EMA 趋势清晰度**（权重 15）—— 市场现在到底有没有方向？还是横盘瞎晃？
-- **价格距强 S/R 距离**（权重 20）—— 现价离最近的强支撑/阻力有多远？安全垫够不够？
-- **S/R 共振标记**（权重 15）—— 三个周期同时在说同一个位置重要吗？
-- **大单方向**（权重 10）—— 近期大单是净买入还是净卖出？
-- **资金费率**（权重 10）—— 多头是不是过热了？空头是不是在交保护费？
-- **持仓量方向**（权重 10）—— 钱在流入市场还是在撤退？
-- **多周期汇聚**（权重 10）—— 1H / 4H / 1D 三个周期是否指向同一个方向？
-- **成交量确认**（权重 10）—— 这根 K 线的量有没有配合价格方向？
-
-权重不是拍脑袋定的——价格结构（S/R + 趋势）占 50%，是判断的基石；情绪和资金流各占 20%，作为辅助信号。这样做的好处是：**即使某个因子失灵，整体评分也不至于被带偏。**
+> The point is not "someone drew a line on a chart." The point is "three timeframes and six dimensions are all screaming that this level matters."
 
 ---
 
-## 使用教程
+### OI-Flow Liquidation Heatmap — Predicting Where Others Get Liquidated
 
-### 1. 下载
+Liquidation data is not publicly available from OKX. We built a **reverse-engineered model based on Open Interest flow (OI-Flow)** :
 
-从 [Releases](https://github.com/zyairemiller/BTC-Resonance-SR-system/releases) 页面下载最新版 `OKXResonance.exe`（约 147MB）。
+- Uses OKX's publicly available Open Interest historical changes to back-derive the entry prices of newly opened positions.
+- Distributes weight across a **7-tier leverage model** (100x / 50x / 20x / 10x / 5x / 3x / 1x).
+- Integrates the **Brunnermeier-Pedersen cascade amplification model**: simulates where one liquidation event pushes price into the next tier's liquidation zone, triggering a domino effect.
 
-### 2. 启动
-
-双击 `OKXResonance.exe` 运行，无需安装 Python 或任何运行环境。
-
-首次运行 Windows 可能会弹出 SmartScreen 警告，点击「更多信息」→「仍要运行」即可。
-
-启动后会自动打开浏览器进入仪表板页面（`http://127.0.0.1:18080`），同时弹出桌面窗口。
-
-> 如果只想用浏览器访问（不弹桌面窗口），用命令行 `OKXResonance.exe --no-gui` 启动。
-
-### 3. 首次确认
-
-启动后会弹出免责声明弹窗，确认后进入主界面。
-
-### 4. 界面概览
-
-- **顶部栏**：品种标签页（BTC / ETH / XAU / XAG / 现货），点击切换品种；实时价格、Guide 按钮、语言切换开关
-- **K线图**（左侧主体）：蜡烛图叠加 EMA144/169 双均线，上方可切换 1H / 4H / 1D 周期
-- **分析面板**（右侧 360px）：EMA 趋势卡、S/R 共振卡、Volume Profile、订单墙、清算热力图
-- **底部栏**：连接状态、运行时间
-
-### 5. 切换品种和周期
-
-- 点击顶部标签切换品种，等待几秒加载数据
-- 点击图表上方 **1H / 4H / 1D** 切换 K 线周期
-- S/R 共振可独立选择时间周期：1H / 4H / 1D / ALL（跨周期合并）
-
-### 6. 怎么看分析结果
-
-**EMA 趋势**
-
-- **GOLDEN_CROSS（金叉）**：EMA144 在 EMA169 之上，偏多头趋势
-- **DEATH_CROSS（死叉）**：EMA144 在 EMA169 之下，偏空头趋势
-- **ENTANGLED（缠绕）**：两线交织纠缠，方向不明，建议观望
-
-**S/R 共振**
-
-- **Super（超级）** — 评分 ≥5 分，高可信度的关键位置，历史上被反复验证
-- **Strong（强）** — 评分 ≥3 分，较强参考价值，多个维度有支撑
-- **Weak（弱）** — 评分 <3 分，参考意义有限，可能只是普通的高低点
-
-**置信度**
-
-- **高 ≥75 分**：多个维度方向一致，市场信号比较清晰
-- **中 50-74 分**：部分维度一致，可以作为参考依据
-- **低 25-49 分**：信号比较模糊，操作需要谨慎
-- **极低 <25 分**：方向非常不明朗，建议先观望不动
-
-### 7. 策略模式
-
-右侧面板可切换三种模式：
-
-- **Aggressive（激进）**：最低 S/R 8 分 + 置信度 50%，适合短线 / 高频交易
-- **Balanced（平衡，默认）**：最低 S/R 12 分 + 置信度 65%，适合日内 / 波段交易
-- **Conservative（保守）**：最低 S/R 15 分 + 置信度 80%，适合中长线持仓
-
-### 8. 代理设置
-
-如果你使用 v2rayN 或 Clash 等代理，程序会自动检测 SOCKS5 端口（10808 / 7890 / 1080）并走代理，无需手动配置。
-
-### 9. 激活（可选）
-
-不激活也能正常使用基础行情分析。激活后可解锁更高频率的数据刷新。
-
-- **OKX API Key**（推荐，免费）：创建只读 API Key，粘贴到激活页面即可。验证后永久有效 + 30 天免考核
-- **USDT TRC20 支付**（29.9 USDT）：支付后填写 TX Hash，激活 30 天
-
-> **删除 API 授权信息**：如果绑定了错误的 API Key 或想清除授权，删除 `C:\Users\你的用户名\.okx_trading\activation.json` 这个文件即可，程序会回到未激活状态。
+This is not the same as raw exchange liquidation data, but it is logically derived from the same risk assessment models used by market makers. **You are not just seeing "where people get liquidated" — you are seeing "where the next domino falls after this one."**
 
 ---
 
-## ⚠️ 免责声明
+### 8-Factor Confidence Score — The Full Picture, Not Just Price
 
-本软件仅供教育和研究目的使用。
+Eight independent factors, weighted into a 0–100% composite confidence rating:
 
-- 加密货币交易存在极高风险，可能导致全部资金损失
-- 所有分析输出**不构成投资建议**
-- 作者不对因使用本软件产生的任何交易损失承担责任
+- **EMA Trend Clarity** (weight 15) — Does the market even have a direction right now, or is it chopping sideways?
+- **Distance to Strong S/R** (weight 20) — How far is current price from the nearest strong support or resistance? Is there enough buffer?
+- **S/R Resonance Flag** (weight 15) — Are three timeframes simultaneously confirming the same level?
+- **Large Order Direction** (weight 10) — Are recent big orders net buying or net selling?
+- **Funding Rate** (weight 10) — Are longs overheating? Are shorts paying a premium?
+- **Open Interest Direction** (weight 10) — Is money flowing into the market or retreating?
+- **Multi-Timeframe Convergence** (weight 10) — Do 1H, 4H, and 1D all point the same way?
+- **Volume Confirmation** (weight 10) — Does this candle's volume support the price direction?
 
-> "信号"、"置信度"、"支撑"、"阻力"等术语均指基于技术指标的计算输出，不代表任何交易建议。
+The weights are not arbitrary. Price structure (S/R + Trend) accounts for 50% — that is the foundation. Sentiment and capital flow each account for 20% as auxiliary signals. The benefit: **even if one factor fails, the overall score does not get thrown off.**
 
 ---
 
-## 📮 联系
+## User Guide
+
+### 1. Download
+
+Get the latest `OKXResonance.exe` (~147MB) from the [Releases](https://github.com/zyairemiller/BTC-Resonance-SR-system/releases) page.
+
+### 2. Launch
+
+Double-click `OKXResonance.exe` — no Python, no runtime, no installation required.
+
+On first run, Windows SmartScreen may show a warning. Click **More info** → **Run anyway**.
+
+After launch, your browser opens automatically to the dashboard (`http://127.0.0.1:18080`), along with a desktop window.
+
+> To use the browser only (no desktop popup), launch via command line: `OKXResonance.exe --no-gui`.
+
+### 3. First-Time Disclaimer
+
+A disclaimer popup appears on first launch. Accept it to enter the main interface.
+
+### 4. Interface Overview
+
+- **Top Bar** — Instrument tabs (BTC / ETH / XAU / XAG / Spot). Click to switch. Live price, Guide button, language toggle.
+- **Candlestick Chart** (main left area) — Candles with EMA144/169 overlays. Switch timeframe above: 1H / 4H / 1D.
+- **Analysis Panel** (right side, 360px) — EMA trend card, S/R resonance card, Volume Profile, Order Wall, Liquidation Heatmap.
+- **Bottom Bar** — Connection status, uptime.
+
+### 5. Switching Instruments & Timeframes
+
+- Click the top tabs to switch instruments. Wait a few seconds for data to load.
+- Click **1H / 4H / 1D** above the chart to switch candlestick timeframe.
+- S/R Resonance supports independent timeframe selection: 1H / 4H / 1D / ALL (cross-timeframe merge).
+
+### 6. How to Read the Analysis
+
+**EMA Trend**
+
+- **GOLDEN_CROSS** — EMA144 above EMA169. Leaning bullish.
+- **DEATH_CROSS** — EMA144 below EMA169. Leaning bearish.
+- **ENTANGLED** — The two lines are intertwined. No clear direction. Better to wait.
+
+**S/R Resonance**
+
+- **Super** — Score ≥5. High-confidence critical level, repeatedly validated historically.
+- **Strong** — Score ≥3. Decent reference value, confirmed by multiple dimensions.
+- **Weak** — Score <3. Limited significance, likely just ordinary swing highs/lows.
+
+**Confidence Score**
+
+- **High ≥75** — Multiple dimensions align. Market signals are relatively clear.
+- **Medium 50–74** — Partial alignment. Can serve as a reference.
+- **Low 25–49** — Signals are fuzzy. Proceed with caution.
+- **Very Low <25** — Direction is highly uncertain. Best to stay out.
+
+### 7. Strategy Modes
+
+Switch between three modes in the right panel:
+
+- **Aggressive** — Min S/R score 8 + confidence 50%. Suited for scalping / high-frequency.
+- **Balanced (default)** — Min S/R score 12 + confidence 65%. Suited for intraday / swing trading.
+- **Conservative** — Min S/R score 15 + confidence 80%. Suited for medium-to-long-term positions.
+
+### 8. Proxy Settings
+
+If you use v2rayN, Clash, or similar proxies, the app auto-detects SOCKS5 ports (10808 / 7890 / 1080) and routes traffic through them. No manual config needed.
+
+### 9. Activation (Optional)
+
+Basic analysis works without activation. Activating unlocks higher-frequency data refresh.
+
+- **OKX API Key** (recommended, free) — Create a read-only API Key, paste it into the activation page. Permanent after verification + 30-day grace period.
+- **USDT TRC20 Payment** (29.9 USDT) — Pay and submit the TX Hash. Activates for 30 days.
+
+> **Clearing API Authorization**: To remove a wrong API Key or wipe activation data, delete `C:\Users\YourName\.okx_trading\activation.json`. The app returns to an unactivated state.
+
+---
+
+## ⚠️ Disclaimer
+
+This software is for educational and research purposes only.
+
+- Cryptocurrency trading carries extreme risk and may result in total loss of capital.
+- All analysis outputs **do not constitute investment advice**.
+- The author assumes no liability for any trading losses resulting from use of this software.
+
+> Terms such as "signal," "confidence," "support," and "resistance" refer to calculations derived from technical indicators and do not represent any trading recommendation.
+
+---
+
+## 📮 Contact
 
 - **Telegram**: [t.me/okxresonce](https://t.me/okxresonce)
-- **OKX 推荐码**: `4870869`
+- **OKX Referral**: `4870869`
