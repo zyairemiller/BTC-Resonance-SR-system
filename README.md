@@ -12,6 +12,16 @@
 
 ---
 
+## ⚠️ Disclaimer
+
+This software is designed solely for price action research and educational purposes. It does not provide any form of investment advice, trading recommendations, or financial guidance.
+
+All market data displayed is sourced exclusively from OKX's public REST API. The app does not access, store, or transmit any user funds, private keys, or sensitive account information. Analysis outputs are derived from publicly available data and technical indicators — they carry no guarantee of accuracy or predictive value.
+
+Use this tool at your own discretion. The author assumes no liability for any decisions made based on the information presented.
+
+---
+
 ## What Is This?
 
 **OKX Resonance** is a crypto technical analysis desktop tool that pulls market data from OKX exchange in real time and helps you read the market through multiple dimensions — all in one dashboard.
@@ -166,7 +176,18 @@ This software is for educational and research purposes only.
 
 ---
 
+## Support This Project
+
+If you find this tool useful, please consider registering through our referral link. After activation, your dashboard unlocks the full feature set:
+
+![Full Featured Dashboard](screenshot-full-featured.png)
+
+**OKX Referral Code**: `4870869` — [Register on OKX](https://www.okx.com/join/4870869)
+
+Your support helps us continue upgrading and maintaining this project. Thank you!
+
+---
+
 ## 📮 Contact
 
 - **Telegram**: [t.me/okxresonce](https://t.me/okxresonce)
-- **OKX Referral**: `4870869`
