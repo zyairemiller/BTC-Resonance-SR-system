@@ -29,9 +29,9 @@ No OKX API Key needed for basic analysis. Just open and go. 中文 / English / �
 
 ## Proprietary Algorithm Breakthrough
 
-### 6-Dimension Resonance Scoring — Why Our S/R Beats TradingView
+### 6-Dimension Resonance Scoring — Why Our S/R Is More Reliable
 
-Most tools draw a flat horizontal line and call it "support". **OKX Resonance is fundamentally different** — every S/R level must pass 6 independent checks before the algorithm assigns a rating:
+Most tools draw a flat horizontal line and call it "support". That gives you a number but no sense of how much confidence you should have in it. **OKX Resonance takes a different approach** — every S/R level must pass 6 independent checks before the algorithm assigns a rating:
 
 - **Touch Count** (up to +5) — Price tested this level repeatedly in history without breaking through. Each valid touch adds +1.
 - **Reversal Strength** (+2) — Price reversed more than 2x ATR after touching, indicating large capital defending this zone.
