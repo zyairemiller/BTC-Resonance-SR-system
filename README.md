@@ -99,6 +99,8 @@ Double-click `OKXResonance.exe` — no Python, no runtime, no installation requi
 
 On first run, Windows SmartScreen may show a warning. Click **More info** → **Run anyway**.
 
+**Antivirus Notice**: `OKXResonance.exe` is packaged with PyInstaller, which may trigger false positives in some antivirus software (Windows Defender, 360, etc.). This is a known behavior of PyInstaller-packaged executables — the app only communicates with OKX's public API and runs a local web server on 127.0.0.1. It does not modify system files or transmit data externally. If your antivirus flags it, add the file to your exclusions list and run it normally.
+
 After launch, your browser opens automatically to the dashboard (`http://127.0.0.1:18080`), along with a desktop window.
 
 > To use the browser only (no desktop popup), launch via command line: `OKXResonance.exe --no-gui`.
